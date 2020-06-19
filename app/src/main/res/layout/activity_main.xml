@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+
+        <TextView
+            android:id="@+id/welcome_message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:text="The coronavirus Test.\n Good luck and stay safe!"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="\n\n"></Space>
+        <TextView
+            android:id="@+id/blacklives"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="\n\n\n #Black_Lives_Matter"
+            android:fontFamily="@font/montserrat"
+            android:textColor="@color/blac"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/welcome_message"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Entrer votre Nom !"
+            android:inputType="textCapWords"
+            android:textColor="@color/colorPrimary"
+            android:textColorHint="@color/colorPrimary"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="20px"/>
+
+        <LinearLayout
+            android:id="@+id/quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="200dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 1: Avez-vous de la fièvre ? (température > 37.5 °C)
+                    هل تعاني من الحمى؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/icon"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+
+
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/choices_For_Question1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ1Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ1Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 2: Avez-vous une toux ?
+هل لديك سعال؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/icon2"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ2Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ2Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 3: Avez-vous noté une forte diminution ou perte de votre goût ou de votre odorat ?\n
+هل لاحظت انخفاض أو فقدان في حاسة التذوق والشم؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon3"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ3Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ3Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 4:Avez-vous un mal de gorge ?\n
+                    هل لديك التهاب في الحلق؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon4"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ4Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ4Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 5: Avez-vous de la diarrhée ?\n
+هل تعاني من الإسهال؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon5"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ5Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ5Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 6: Avez-vous une fatigue inhabituelle ?\n
+هل تعاني من أي تعب غير عادي؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon6"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ6Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ6Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 7:Avez-vous un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ?\n
+هل تعاني من ضيق غير عادي في التنفس عند التحدث أو بذل مجهود صغير؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon7"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+                <RadioGroup
+                    android:id="@+id/choices_For_Question7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/answer_1_question_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="@color/colorAccent"
+                    android:onClick="onRadioButtonInQ7Clicked"
+                    android:paddingHorizontal="10dp"
+                    android:text="Oui"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/answer_2_question_7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:buttonTint="@color/colorAccent"
+                    android:onClick="onRadioButtonInQ7Clicked"
+                    android:paddingHorizontal="10dp"
+                    android:text="Non"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 8: Avez-vous une maladie cardiaque ou vasculaire ? Ou prenez vous un traitement à visée cardiologique ?\n
+هل تعاني من أمراض القلب أو الأوعية الدموية؟ أم أنك تأخذ علاج القلب؟
+
+"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon8"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ8Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ8Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                        </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 9: Êtes-vous diabétique ?\n
+هل أنت مصاب بالسكري؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon9"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ9Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_9"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ9Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@color/colorPrimaryDark" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Question 10: Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ?\n
+هل تعاني من مرض في الجهاز التنفسي؟ هل يتابعك طبيب مختص في أمراض الرئة ؟"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/icon10"
+                    android:layout_width="375dp"
+                    android:layout_height="150dp"
+                    android:padding="5dp"></ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="10dp">
+
+                <RadioGroup
+                    android:id="@+id/choices_For_Question10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/answer_1_question_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ10Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Oui"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                    <RadioButton
+                        android:id="@+id/answer_2_question_10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:buttonTint="@color/colorAccent"
+                        android:onClick="onRadioButtonInQ10Clicked"
+                        android:paddingHorizontal="10dp"
+                        android:text="Non"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="18sp" />
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/quiz"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/quiz"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                style="@style/Button.Background"
+                android:onClick="answerCheck"
+                android:text="Check Answers"
+                android:textColor="#000000" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/colorAccent" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@id/quiz"
+                style="@style/Button.Background"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:onClick="resetTheQuiz"
+                android:paddingTop="15dp"
+                android:text="Try Again"
+                android:textColor="#000000" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
